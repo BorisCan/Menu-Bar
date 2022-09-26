@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom,  rgb(240, 233, 233), rgb(117, 166, 174));
+}
+
+
+header{
+   width: 100%;
+   padding: 15px 0px;
+   position: relative;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo i{
+    font-size: 40px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.logo a {
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(13, 95, 107);
+}
+
+
+.navbar .nav_item{
+    list-style: none;
+}
+
+.nav_item,
+.nav_list .nav_link{
+    text-decoration: none;
+    color: rgb(13, 95, 107);
+    font-size: 17px;
+    display: flex;
+    margin: 0 40px;
+    font-weight: 600;
+}
+
+.open{
+    font-size: 0;
+    color: rgb(13, 95, 107);
+}
+
+.close{
+    cursor: pointer;
+    font-size: 30px;
+    display: none;
+}
+
+.login{
+    padding: 12px 25px;
+    border: 2px solid rgb(117, 166, 174);
+    background-color: rgb(117, 166, 174);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: all .4s ease;
+    border-radius: 10px;
+}
+
+.login:hover{
+    background-color: white;
+    color: rgb(117, 166, 174);
+}
+
+.search-button{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-button i{
+    position: absolute;
+    cursor: pointer;
+    left: 15px;
+    font-size: 20px;
+    top: 30%;
+    transition: all .4s ease;
+}
+.search-button input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(117, 166, 174);
+    padding: 15px 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 850px){
+   .search-button input{
+    padding: 10px 20px;
+   }
+
+   .search-button i{
+    font-size: 15px;
+    left: 4px;
+   }
+
+   .login{
+    padding: 12px 15px;
+   }
+}
+
+@media (max-width: 1021px){
+     .nav_item .nav_list
+     .nav_link{
+        margin: 0 10px;
+     }
+}
+
+@media (max-width: 768px){
+
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .login{
+        display: none;
+    }
+
+    .nav_item{
+        margin: 0;
+        position: fixed;
+        padding: 100px 150px;
+        left: 0;
+        z-index: 1;
+        top: -100%;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to bottom, #e0e7e6, #6098b3);
+        flex-direction: column;
+        transition: top .5s ease;
+        gap: 30px;
+        box-shadow: 2px 0 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .nav_item.active {
+        top: -0%;
+    }
+
+    .nav_item .nav_link{
+        font-size: 25px;
+        border-bottom: 2px solid white;
+        padding: 10px 0;
+        text-align: center;
+        justify-content: center;
+        transition: 0.4s ease;
+    }
+
+    .open{
+       position: absolute;
+       display: inline-flex;
+       right: 20px;
+       cursor: pointer;
+       font-size: 35px;
+    }
+
+    .close{
+        position: absolute;
+        display: inline-flex;
+        top: 20px;
+        right: 20px;
+        font-size: 35px;
+    }
+
+    .search-button input{
+        padding: 15px 35px;
+        margin-right: 80px;
+    }
+
+    .search-button i{
+        font-size: 20px;
+        left: 10px;
+    }
+    
+}
+
+
+
+@media (max-width: 628px){
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .login{
+        display: none;
+    }
+
+    .search-button input{
+        display: none;
+    }
+
+    .search-button i{
+       display: none;
+    }
+}
